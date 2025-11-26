@@ -19,6 +19,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -97,6 +98,7 @@ public class TiingoAdapterTest {
 
     @Test
     @Tag("integration")
+    @Disabled
     void liveIntegrationTest() {
 
         HttpClient realClient = HttpClient.newBuilder()
