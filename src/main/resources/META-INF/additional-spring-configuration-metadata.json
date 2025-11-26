@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "portfolio_opt.yfinance.url",
+    "type": "java.lang.String",
+    "description": "A description for 'portfolio_opt.yfinance.url'"
+  },
+  {
+    "name": "portfolio.provider.tiingo.history-start",
+    "type": "java.lang.String",
+    "description": "A description for 'portfolio.provider.tiingo.history-start'"
+  },
+  {
+    "name": "portfolio.provider.tiingo.base-url",
+    "type": "java.lang.String",
+    "description": "A description for 'portfolio.provider.tiingo.base-url'"
+  },
+  {
+    "name": "portfolio.provider.tiingo.key",
+    "type": "java.lang.String",
+    "description": "A description for 'portfolio.provider.tiingo.key'"
+  }
+]}
