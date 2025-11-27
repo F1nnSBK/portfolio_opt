@@ -33,12 +33,25 @@ public class MonteCarloOptimizer implements PortfolioOptimizer {
             throw new IllegalArgumentException("Portfolio must contain at least one asset");
         }
 
+        // Sync Time Series
+        int minLength = allSeries.stream()
+                .mapToInt(s -> s.closingPrices().length)
+                .min()
+                .orElse(0);
+
+        if (minLength < 10) {
+            throw new IllegalArgumentException(
+                    "Not enough data overlap to calculate correlation. Min length: " + minLength);
+        }
+
         int assetCount = allSeries.size();
-        int timeSteps = allSeries.get(0).closingPrices().length;
+        int timeSteps = minLength;
 
         double[][] rawPrices = new double[assetCount][timeSteps];
         for (int i = 0; i < assetCount; i++) {
-            rawPrices[i] = allSeries.get(i).closingPrices();
+            double[] source = allSeries.get(i).closingPrices();
+            int offset = source.length - minLength;
+            System.arraycopy(source, offset, rawPrices[i], 0, minLength);
         }
 
         double[][] returnsMatrix = new double[assetCount][];
