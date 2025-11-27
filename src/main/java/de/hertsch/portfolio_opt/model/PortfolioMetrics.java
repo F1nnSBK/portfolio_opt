@@ -1,9 +1,9 @@
 package de.hertsch.portfolio_opt.model;
 
-public record OptimizationResult(
+public record PortfolioMetrics(
         double[] weights,
         double sharpeRatio,
-        double returnPa,
+        double expectedReturn,
         double volatility) {
 
 }
