@@ -117,6 +117,7 @@ public class MonteCarloOptimizer implements PortfolioOptimizer {
      * Single simulation-task.
      */
     private static class SimulationTask implements Callable<PortfolioMetrics> {
+        // TODO: Implement 20% Rule
         private final int n;
         private final double[] means;
         private final double[][] cov;
