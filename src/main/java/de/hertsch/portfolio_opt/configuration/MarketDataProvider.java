@@ -1,4 +1,4 @@
-package de.hertsch.portfolio_opt.service;
+package de.hertsch.portfolio_opt.configuration;
 
 import de.hertsch.portfolio_opt.model.PriceSeries;
 

@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import de.hertsch.portfolio_opt.model.PriceSeries;
-import de.hertsch.portfolio_opt.service.MarketDataProvider;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
 
